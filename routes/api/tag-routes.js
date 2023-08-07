@@ -24,6 +24,7 @@ router.get('/:id', async (req, res) => {
       include: [{model: Product}]
     });
 
+    // id not found case
     if(!tagData){
       res.status(404).json({message: 'No tag found with this id! '});
       return;
@@ -55,6 +56,7 @@ router.put('/:id', async (req, res) => {
       }
     });
 
+    // id not found case
     if (!tagData) {
       res.status(404).json({ message: 'No category found with this id! ' });
       return;
@@ -75,6 +77,7 @@ router.delete('/:id', async (req, res) => {
       }
     });
 
+    // id not found case
     if (!tagData) {
       res.status(404).json({ message: 'No category found with this id! ' });
       return;
