@@ -42,6 +42,7 @@ router.get('/:id', async (req, res) => {
       ]
     })
 
+    // id not found case
     if(!productData){
       res.status(404).json({ message: "No product found with this id! "});
       return;
@@ -100,7 +101,7 @@ router.put('/:id', (req, res) => {
         ProductTag.findAll({
           where: { product_id: req.params.id }
         }).then((productTags) => {
-          // create filtered list of new tag_ids
+          // create filtered list of new tag_ids 
           const productTagIds = productTags.map(({ tag_id }) => tag_id);
           const newProductTags = req.body.tagIds
             .filter((tag_id) => !productTagIds.includes(tag_id))
@@ -140,6 +141,7 @@ router.delete('/:id', async (req, res) => {
       }
     });
 
+    // id not found case
     if(!productData){
       res.status(404).json({message: 'No product found with id! '});
       return;
