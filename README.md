@@ -34,7 +34,8 @@
   Afterwards, simply run 'node server' to start the application.  Enjoy!
 
 
-  Walkthrough Video Link
+  Walkthrough Video Link:
+  https://drive.google.com/file/d/1HZt8eP-1XguaI4XkzOlzLc5fjnaIaZa7/view
   
   ## License
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
